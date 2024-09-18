@@ -1,34 +1,83 @@
-.App {
-  text-align: center;
+/* .chat-container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.chat-history {
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.user-message {
+  background-color: #e6f3ff;
+  text-align: right;
+}
+
+.assistant-message {
+  background-color: #f0f0e7;
+  text-align: left;
+}
+
+.input-area {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+textarea {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
   color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #0056b3;
+} */
+ body{
+  background-color: rgba(3,1,38,255);
+ }
+.main-container{
+  
+  background-color: rgba(3,1,38,255);
+}
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: auto;
+  flex-direction: column;
+  
+}
+.logo {
+  height: 150px;
+
+  transition: transform 0.3s ease-in-out;
 }
 
-@keyframes App-logo-spin {
+.logo:hover {
+  animation: slowRotate 5s linear infinite;
+}
+
+@keyframes slowRotate {
   from {
     transform: rotate(0deg);
   }
@@ -36,3 +85,198 @@
     transform: rotate(360deg);
   }
 }
+.charles {
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  display: flex;
+}
+
+.charles:hover {
+  animation: shake 0.3s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translateX(-1px);
+  }
+  20%, 80% {
+    transform: translateX(2px);
+  }
+  30%, 50%, 70% {
+    transform: translateX(-4px);
+  }
+  40%, 60% {
+    transform: translateX(4px);
+  }
+}
+.text-area {
+  display: flex;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  caret-color: rgba(3,1,38,255);
+  appearance: none;
+  resize: vertical;
+  justify-content: center;
+  align-items: center;
+  bottom: 20px; /* Position slightly below the bottom */
+  left: 0;
+  right: 0;
+  z-index: 9999; /* Ensure it appears above other elements */
+  position: absolute;
+}
+
+.txtinput {
+  width: 70%;
+  border-radius: 8px;
+  padding: 12px;
+  border: 2px solid #000;
+  position: absolute; 
+  transform: translateY(-78%);
+  font-size: 17px;
+}
+
+
+.txtinput:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 255, 0.5); /* Optional: Add a subtle glow effect */
+}
+
+
+.enter
+{
+  height: 25px;
+  position: absolute;
+  top: -67px;
+  left: 550;
+  display: flex;
+  right: 15%;
+}
+.txt-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.letter {
+  margin-right: 5px;
+  animation: jumpAndColor 1.5s infinite alternate;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+@keyframes jumpAndColor {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+/* Color animations */
+.letter:nth-child(1) { animation-delay: 0s; color: #ff0000; }
+.letter:nth-child(2) { animation-delay: 0.05s; color: #00ff00; }
+.letter:nth-child(3) { animation-delay: 0.1s; color: #0000ff; }
+.letter:nth-child(4) { animation-delay: 0.15s; color: #ffff00; }
+.letter:nth-child(5) { animation-delay: 0.2s; color: #ff00ff; }
+.letter:nth-child(6) { animation-delay: 0.25s; color: #00ffff; }
+.letter:nth-child(7) { animation-delay: 0.3s; color: #ff8000; }
+.letter:nth-child(8) { animation-delay: 0.35s; color: #ff0000; }
+.letter:nth-child(9) { animation-delay: 0.4s; color: #00ff00; }
+.letter:nth-child(10) { animation-delay: 0.45s; color: #0000ff; }
+.letter:nth-child(11) { animation-delay: 0.5s; color: #ffff00; }
+.letter:nth-child(12) { animation-delay: 0.55s; color: #ff00ff; }
+.letter:nth-child(13) { animation-delay: 0.6s; color: #ff8000; }
+.letter:nth-child(14) { animation-delay: 0.65s; color: #ff0000; }
+.letter:nth-child(15) { animation-delay: 0.7s; color: #00ff00; }
+.letter:nth-child(16) { animation-delay: 0.75s; color: #0000ff; }
+.letter:nth-child(17) { animation-delay: 0.8s; color: #ff00ff; }
+.letter:nth-child(18) { animation-delay: 0.85s; color: #ffff00; }
+.letter:nth-child(19) { animation-delay: 0.9s; color: #ff8000; }
+.letter:nth-child(20) { animation-delay: 0.95s; color: #ff0000; }
+.letter:nth-child(21) { animation-delay: 1s; color: #ffff00; }
+
+/* Add space between CHAT WITH CHARLES and BOT */
+
+.letter:nth-child(4) { margin-right: 20px; }
+.letter:nth-child(8) { margin-right: 20px; }
+.letter:nth-child(15) { margin-right: 20px; }
+
+.chat-history {
+  height: calc(100vh - 200px); /* Adjust this value based on your layout */
+  overflow-y: auto;
+  padding-left: 14%;
+  padding-right: 15%;
+  display: flex;
+  flex-direction: column;
+  color: rgba(255, 255, 255);
+  font-weight: 400;
+  background-color: rgba(3,1,38,255);
+}
+
+
+.message-container {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.message-container.user {
+  justify-content: flex-end;
+  font-size: 18px;
+  background-color: #de5959;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+  align-self: flex-end;
+  animation: fadeInRight 0.5s ease-out forwards;
+
+}
+
+.message-container.user {
+  justify-content: flex-end;
+  font-size: 18px;
+  background-color: #de5959;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+  align-self: flex-end;
+  animation: fadeInRight 0.5s ease-out forwards;
+
+  /* Add text using ::before pseudo-element */
+  position: relative;
+}
+
+
+.message-container.assistant {
+  justify-content: flex-start;
+  background-color: #00ff00;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+  align-self: flex-start;
+  animation: fadeInLeft 1s ease-out forwards;
+
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: none; }
+}
+.message {
+  transition: opacity 300ms ease-in;
+}
+
+.message-enter {
+  opacity: 0;
+}
+
+.message-enter-active {
+  opacity: 1;
+}
+
